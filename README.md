@@ -34,6 +34,15 @@ Display weather data on a user-friendly dashboard, providing clear visualization
 Enable weather forecasting using historical data and simple trend analysis.
 Use LoRa communication for long-range, low-power data transmission between sensors and the central system.
 <br>
+<h3>Features:</h3>
+Temperature and Humidity Measurement: Collects real-time data using DHT22 sensors.<br>
+Rainfall Precipitation Measurement: Tracks rainfall using a rain gauge sensor.<br>
+Wind Speed and Direction Monitoring: Uses appropriate sensors to capture wind data.<br>
+LoRa Communication: Long-range, low-power communication between sensors and base station.<br>
+Data Persistence: Stores sensor data in a local or cloud database for long-term access.<br>
+Dashboard Visualization: A web interface that displays current and historical weather data.<br>
+Weather Forecasting: Provides future weather predictions based on trends in collected data.<br>
+<br>
 <h3>Requirements :</h3>
 BME620 temperature and humidity sensor <br>
 Rain gauge sensor for precipitation measurement <br>
