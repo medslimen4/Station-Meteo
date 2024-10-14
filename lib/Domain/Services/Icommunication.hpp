@@ -1,6 +1,15 @@
-class Icommunication
-{
+
+#include <string>
+#include "../lib/Domain/Entity/WeatherStationData.hpp"
+
+class Icommunication {
 public:
-    virtual bool senddata() = 0;
-    //virtual int LoadTimeFromRtcAsMin() = 0;
+    // Initialize LoRa communication
+    virtual void initialize() = 0;
+    // Send data via LoRa to a remote server or storage
+    virtual void sendData(const WeatherStationData& data) = 0;
+    // Optional: Check the connection status of the LoRa module
+    virtual bool isConnected() = 0;
+
 };
+
