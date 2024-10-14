@@ -1,4 +1,4 @@
-# 🌦️ Smart Weather Station
+# 🌦️ Smart Weather Station 🌦️ 
 
 This projet is developed during Labs of the subject integration project.
 
