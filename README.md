@@ -16,9 +16,9 @@ Professional Master's in IoT Service Development
 
 
 
-Under the supervision of:
-Mounir Abida, 
-Professor, Researcher and Technologist ,
+Under the supervision of:<br>
+Mounir Abida, <br>
+Professor, Researcher and Technologist ,<br>
 Higher Institute of Technological Studies of Mahdia (ISET Mahdia)
 <br>
 <br>
