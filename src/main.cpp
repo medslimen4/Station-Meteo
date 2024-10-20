@@ -1,4 +1,4 @@
-/*
+
 #include <Arduino.h>
 #include "../lib/Infrastructure/MesurerTempHumImp/MesurerTempHumImp.hpp"
 #include "../lib/Business/MesurerTemperatureHumidite/MesurerTemperatureHumidite.hpp"
@@ -33,4 +33,3 @@ void loop() {
 
 }
 
-*/

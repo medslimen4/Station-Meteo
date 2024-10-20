@@ -8,13 +8,9 @@ private:
 public:
     MesurerPluie(ImeasurerPluie* sensor) : pluieSensor(sensor) {}
 
-    void InitSensor()
-    {
-        pluieSensor->InitSensorPluie();
-    }
+    void InitSensor();
+  
 
-    RainfallData getRainfallData()
-    {
-        return pluieSensor->measureRainfall();
-    }
+    RainfallData getRainfallData();
+
 };

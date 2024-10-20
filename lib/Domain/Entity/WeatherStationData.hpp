@@ -1,3 +1,4 @@
+#pragma once
 #include "../lib/Domain/Entity/RainfallData.hpp"
 #include "../lib/Domain/Entity/TemperatureHumidityData.hpp"
 #include "../lib/Domain/Entity/WindData.hpp"

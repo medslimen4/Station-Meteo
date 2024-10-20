@@ -10,19 +10,13 @@ private:
 public:
     GererCommunication(Icommunication* comm) : communication(comm) {}
 
-    void initializeCommunication()
-    {
-        communication->initialize(); // Initialize the communication module
-    }
+    void initializeCommunication();
+ 
 
-    void sendWeatherData(const WeatherStationData& data)
-    {
-        communication->sendData(data); // Send weather data via communication
-    }
+    void sendWeatherData(const WeatherStationData& data);
 
-    bool checkConnection()
-    {
-        return communication->isConnected(); // Check connection status
-    }
+
+    bool checkConnection();
+  
 };
 

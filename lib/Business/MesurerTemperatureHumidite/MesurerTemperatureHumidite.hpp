@@ -7,13 +7,9 @@ private:
 public:
     MesurerTemperatureHumidite(ImeasurerTempHum* sensor) : tempHumSensor(sensor) {}
 
-    void InitSensor()
-    {
-        tempHumSensor->InitSensorTempHum();
-    }
+    void InitSensor();
 
-    TemperatureHumidityData getTemperatureHumidityData()
-    {
-        return tempHumSensor->measureTemperatureHumidity();
-    }
+
+    TemperatureHumidityData getTemperatureHumidityData();
+ 
 };

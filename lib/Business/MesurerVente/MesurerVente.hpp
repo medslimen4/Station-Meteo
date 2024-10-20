@@ -8,13 +8,9 @@ private:
 public:
     MesurerVente(ImeasurerVente* sensor) : ventSensor(sensor) {}
 
-    void InitSensor()
-    {
-        ventSensor->InitSensorVente();
-    }
+    void InitSensor();
 
-    WindData getWindData()
-    {
-        return ventSensor->measureWind();
-    }
+
+    WindData getWindData();
+   
 };
