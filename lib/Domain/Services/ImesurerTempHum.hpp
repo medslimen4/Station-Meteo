@@ -1,6 +1,6 @@
 
-
 #include "../lib/Domain/Entity/TemperatureHumidityData.hpp" 
+
 
 class ImeasurerTempHum {
 public:

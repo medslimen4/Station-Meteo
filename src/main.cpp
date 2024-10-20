@@ -1,18 +1,36 @@
+/*
 #include <Arduino.h>
+#include "../lib/Infrastructure/MesurerTempHumImp/MesurerTempHumImp.hpp"
+#include "../lib/Business/MesurerTemperatureHumidite/MesurerTemperatureHumidite.hpp"
+#include "../lib/Domain/Entity/TemperatureHumidityData.hpp"
 
-// put function declarations here:
-int myFunction(int, int);
+
+//instance de l'infra
+MesurerTempHumImp *MTHIMP ; 
+
+//instance business 
+MesurerTemperatureHumidite MTH(MTHIMP) ; 
+
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  
+  Serial.begin(115200);
+  MTH.InitSensor();
+
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  MTH.getTemperatureHumidityData() ; 
+  TemperatureHumidityData data = MTH.getTemperatureHumidityData();
+
+  Serial.print("Current time : ");
+  Serial.print(data.timestamp) ; 
+  Serial.print("Temerature ");
+  Serial.print(data.temperatureCelsius) ; 
+  Serial.print("Humidity : ");
+  Serial.print(data.humidityPercentage) ; 
+
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
+*/

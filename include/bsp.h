@@ -1,5 +1,7 @@
 #include<Stream.h>
 #define         relayControlPin       14               // relayControlPin pin
+#define         dhtPin                  12
+#define         dhttype              DHT22
 bool            isRelayOn=            false;
 const long      relayOnDuration=      217000;
 unsigned long   relayStartTime;
