@@ -22,8 +22,8 @@ TemperatureHumidityData MesurerTempHumImp::measureTemperatureHumidity() {
     data.sensorModel = "DHT22 Sensor";
     data.temperatureCelsius = float(dht.readTemperature()) ;
     data.humidityPercentage = float(dht.readHumidity()) ;
-    auto now = std::chrono::system_clock::now();
-    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
-    data.timestamp =currentTime;
+    //auto now = std::chrono::system_clock::now();
+    //std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+    //data.timestamp =currentTime;
     return data;
 }

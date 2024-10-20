@@ -1,35 +1,44 @@
-
+#include <DHT.h>
+#include <Wire.h>
 #include <Arduino.h>
-#include "../lib/Infrastructure/MesurerTempHumImp/MesurerTempHumImp.hpp"
-#include "../lib/Business/MesurerTemperatureHumidite/MesurerTemperatureHumidite.hpp"
 #include "../lib/Domain/Entity/TemperatureHumidityData.hpp"
+#include "../lib/Domain/Services/ImesurerTempHum.hpp"
+#include "../lib/Infrastructure/MesurerTempHumImp/MesurerTempHumImp.hpp"
+#include "../lib\Domain\Services\ImesurerVente.hpp" 
 
-
-//instance de l'infra
-MesurerTempHumImp *MTHIMP ; 
-
-//instance business 
-MesurerTemperatureHumidite MTH(MTHIMP) ; 
-
+// Declare the sensor interface and service
+MesurerTempHumImp tempHumSensor;
+MesurerTemperatureHumidite tempHumService(&tempHumSensor);
 
 void setup() {
-  
-  Serial.begin(115200);
-  MTH.InitSensor();
+  // Initialize serial communication for output
+  Serial.begin(9600);
 
+  // Initialize the temperature and humidity sensor
+  tempHumService.InitSensor();
 
+  // Give time for sensor initialization
+  delay(2000); 
 }
 
 void loop() {
-  MTH.getTemperatureHumidityData() ; 
-  TemperatureHumidityData data = MTH.getTemperatureHumidityData();
+  // Retrieve temperature and humidity data
+  TemperatureHumidityData data = tempHumService.getTemperatureHumidityData();
 
-  Serial.print("Current time : ");
-  Serial.print(data.timestamp) ; 
-  Serial.print("Temerature ");
-  Serial.print(data.temperatureCelsius) ; 
-  Serial.print("Humidity : ");
-  Serial.print(data.humidityPercentage) ; 
+  // Display the data on the Serial Monitor
+  Serial.print("Temperature: ");
+  Serial.print(data.temperatureCelsius);
+  Serial.println(" °C");
 
+  Serial.print("Humidity: ");
+  Serial.print(data.humidityPercentage);
+  Serial.println(" %");
+
+  Serial.print("Sensor Model: ");
+  Serial.println(data.sensorModel);
+
+
+
+  // Wait for 5 seconds before taking another measurement
+  delay(5000);
 }
-
