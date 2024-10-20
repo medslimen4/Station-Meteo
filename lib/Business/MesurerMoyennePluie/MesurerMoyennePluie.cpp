@@ -1,4 +1,4 @@
-#include "MesurerMoyennePluie.hpp"
+#include "..\lib\Business\MesurerMoyennePluie\MesurerMoyennePluie.hpp"
 
 void MesurerPluie::InitSensor()
 {
