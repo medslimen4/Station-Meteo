@@ -1,6 +1,7 @@
 
-#include "../lib/Domain/Entity/TemperatureHumidityData.hpp" 
+#pragma once
 
+#include "../lib/Domain/Entity/TemperatureHumidityData.hpp" 
 class ImeasurerTempHum 
 {
 public:
