@@ -4,18 +4,18 @@
 #include "../lib/Domain/Entity/TemperatureHumidityData.hpp"
 #include "../lib/Domain/Services/ImesurerTempHum.hpp"
 #include "../lib/Infrastructure/MesurerTempHumImp/MesurerTempHumImp.hpp"
-#include "../lib\Domain\Services\ImesurerVente.hpp" 
+#include "..\lib\Business\MesurerTemperatureHumidite\MesurerTemperatureHumidite.hpp"
 
 // Declare the sensor interface and service
 MesurerTempHumImp tempHumSensor;
-MesurerTemperatureHumidite tempHumService(&tempHumSensor);
+MesurerTemperatureHumidite btemp(&tempHumSensor);
 
 void setup() {
   // Initialize serial communication for output
   Serial.begin(9600);
 
   // Initialize the temperature and humidity sensor
-  tempHumService.InitSensor();
+  btemp.InitSensor();
 
   // Give time for sensor initialization
   delay(2000); 
@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   // Retrieve temperature and humidity data
-  TemperatureHumidityData data = tempHumService.getTemperatureHumidityData();
+  TemperatureHumidityData data = btemp.getTemperatureHumidityData();
 
   // Display the data on the Serial Monitor
   Serial.print("Temperature: ");
@@ -35,7 +35,7 @@ void loop() {
   Serial.println(" %");
 
   Serial.print("Sensor Model: ");
-  Serial.println(data.sensorModel);
+  //Serial.println(data.sensorModel);
 
 
 
