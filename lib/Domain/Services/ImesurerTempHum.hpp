@@ -9,3 +9,7 @@ public:
     virtual TemperatureHumidityData measureTemperatureHumidity() = 0;  // Measure and return temp/humidity data
 };
 
+   
+
+
+   
