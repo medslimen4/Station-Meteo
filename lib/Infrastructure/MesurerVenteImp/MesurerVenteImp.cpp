@@ -1,4 +1,4 @@
-#include "MesurerVenteImp.hpp"
+#include "..\lib\Infrastructure\MesurerVenteImp\MesurerVenteImp.hpp"
 #include <iostream>
 
 void MesurerVenteImp::InitSensorVente() {

@@ -1,4 +1,4 @@
-#include "MesurerVente.hpp"
+#include "..\lib\Business\MesurerVente\MesurerVente.hpp"
 
 void MesurerVente::InitSensor()
 {

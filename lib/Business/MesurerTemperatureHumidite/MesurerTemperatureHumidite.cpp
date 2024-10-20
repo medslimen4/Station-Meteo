@@ -1,4 +1,4 @@
-#include "MesurerTemperatureHumidite.hpp"
+#include "..\lib\Business\MesurerTemperatureHumidite\MesurerTemperatureHumidite.hpp"
 
 void MesurerTemperatureHumidite::InitSensor()
 {

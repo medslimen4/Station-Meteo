@@ -1,4 +1,4 @@
-#include "CommunicationImp.hpp"
+#include "..\lib\Infrastructure\CommunicationImp\CommunicationImp.hpp"
 #include <iostream>
 
 void CommunicationImp::initialize() {
