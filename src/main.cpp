@@ -47,7 +47,7 @@ unsigned long lastPrintTime = 0;
 unsigned long lastSendTime = 0;
 const unsigned long PRINT_INTERVAL = 4000; // 1 second
 const unsigned long SEND_INTERVAL = 10000;  // 5 seconds
-#define configTICK_RATE_HZ 1000
+//#define configTICK_RATE_HZ 1000
 
 
 // Task to read weather data and print it

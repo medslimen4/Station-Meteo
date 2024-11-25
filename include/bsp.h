@@ -2,9 +2,9 @@
 #define RECEIVER_ADDRESS 0xBB
 
 
-const int DHT_PIN = 23;     // DHT22 sensor pin
+const int DHT_PIN = 25;     // DHT22 sensor pin
 const int DHT_TYPE = DHT22;
-const int ILS_PIN = 36;     // removed replaced 12
+const int ILS_PIN = 12;     // removed replaced 12
 const int SDA_PIN = 21;    // I2C SDA pin for MPU6050
 const int SCL_PIN = 22;    // I2C SCL pin for MPU6050
 const float RAYON_ANEMOMETRE = 0.091;  // Anemometer radius in meters
